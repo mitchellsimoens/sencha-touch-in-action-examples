@@ -9,33 +9,33 @@
 
 Ext.application({
     launch : function() {
-var loginContainer = Ext.create('Ext.Container', {
-    itemId     : 'loginContainer',
-    fullscreen : true,
-    items      : [
-        {
-            xtype       : 'textfield',
-            label       : 'Login',
-            placeHolder : 'Enter Username Here'
-        },
-        {
-            xtype       : 'textfield',
-            label       : 'Organization',
-            itemId      : 'orgField',
-            placeHolder : 'Enter Your Organization Here'
-        },
-        {
-            xtype       : 'textfield',
-            label       : 'Password',
-            placeHolder : 'Enter Password Here'
-        }
-    ]
-});
+        var loginContainer = Ext.create('Ext.Container', {
+            itemId     : 'loginContainer',
+            fullscreen : true,
+            items      : [
+                {
+                    xtype       : 'textfield',
+                    label       : 'Login',
+                    placeHolder : 'Enter Username Here'
+                },
+                {
+                    xtype       : 'textfield',
+                    label       : 'Organization',
+                    itemId      : 'orgField',
+                    placeHolder : 'Enter Your Organization Here'
+                },
+                {
+                    xtype       : 'textfield',
+                    label       : 'Password',
+                    placeHolder : 'Enter Password Here'
+                }
+            ]
+        });
+
+        var container = Ext.ComponentQuery.query('#loginContainer')[0];
+        container.remove(container.child('#orgField'));
     }
 });
-
-var container = Ext.ComponentQuery.query('#loginContainer')[0];
-container.remove('orgField');
 
 
     </script>
